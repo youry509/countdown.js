@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="../new.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="../new.js"></script>
+<div class="clock" style="margin:2em;"></div>
+<div class="message"></div>
+<script type="text/javascript">
+		var clock;
+
+	$(document).ready(function() {
+
+			clock = $('.clock').FlipClock(2820, {
+		        clockFace: 'MinuteCounter',
+		        countdown: true,
+		        callbacks: {
+		        	stop: function() {
+		        		$('.message').html('Our Sale is pending for you to buy!');
+		        	}
+		        }
+		    });
+
+		});
+	</script>
